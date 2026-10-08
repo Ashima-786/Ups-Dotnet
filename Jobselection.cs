@@ -8,24 +8,18 @@ class Jobselection
         if (apti > 70)
         {
             Console.WriteLine("Eligible for Technical Interview");
-
             Console.Write("Enter Technical Interview percentage: ");
             double tech = Convert.ToDouble(Console.ReadLine());
-
             if (tech > 80)
             {
                 Console.WriteLine("Eligible for HR Interview");
-
                 Console.Write("Enter HR percentage: ");
                 double hr = Convert.ToDouble(Console.ReadLine());
-
                 if (hr > 80)
                 {
-                    Console.WriteLine("Eligible for Salary Fixation");
-
+                    Console.WriteLine("Eligible to fix Salary");
                     Console.Write("Enter Total Marks out of 300: ");
                     int total = Convert.ToInt32(Console.ReadLine());
-
                     if (total >= 280 && total <= 300)
                     {
                         Console.WriteLine("Salary = Rs.25000");
@@ -41,7 +35,7 @@ class Jobselection
                 }
                 else
                 {
-                    Console.WriteLine("Not eligible for Salary Fixation");
+                    Console.WriteLine("Not eligible to fix Salary");
                 }
             }
             else
