@@ -1,5 +1,5 @@
 using System;
-public class Calc
+public class Calcstr
 {
     public static void Main()
     {
