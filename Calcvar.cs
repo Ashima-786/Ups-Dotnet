@@ -7,7 +7,7 @@ public class Calcvar
         int x = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Enter Y value:");
         int y = Convert.ToInt32(Console.ReadLine()); 
-        Console.WriteLine("Enter Operation (1=Add, 2=Sub, 3=Mult, 4=Div):");
+        Console.WriteLine("Enter Operation:");
         int choice = Convert.ToInt32(Console.ReadLine());
         int result = 0;
         switch(choice)
