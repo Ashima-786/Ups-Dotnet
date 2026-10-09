@@ -16,7 +16,7 @@ public class Hotel_room
         Console.Write("No of days stay: ");
         int days = Convert.ToInt32(Console.ReadLine());
         Console.Write("Customer type (Membership/Normal): ");
-        string customer = Console.ReadLine()??"";
+        string customer = (Console.ReadLine() ?? "").ToLower();
         Console.Write("Include food? (yes/no): ");
         string food = Console.ReadLine().ToLower();
         if (choice < 1 || choice > 3 || days <= 0 ||
