@@ -2,7 +2,7 @@ using System;
 
 public class Odd_pattern
 {
-    public static void Main()
+    public static void Main(String[] args)
     {
         for (int i = 9; i >= 1; i -= 2)
         {
