@@ -1,0 +1,23 @@
+using System;
+public class Even_nocountArr
+{
+    public static void Main(string[] args)
+    {
+        int size = 5;
+        int[] arr = new int[size];
+        Console.WriteLine("Enter 5 numbers:"); 
+        int count = 0;
+        for (int z = 0; z < arr.Length; z++)
+        {
+            arr[z] = Convert.ToInt32(Console.ReadLine());
+        }
+        for (int z = 0; z < arr.Length; z++)
+        {
+            if (arr[z] % 2 == 0)
+            {
+                count++;
+            }
+        }
+        Console.WriteLine("Total even numbers: " + count);
+    }
+}
