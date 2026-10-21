@@ -1,0 +1,41 @@
+using System;
+public class MagicNumberArray
+{
+    public static void Main(string[] args)
+    {
+        int size = 5;
+        Console.WriteLine("Enter the numbers:"); // Fixed: Added missing semicolon here
+        int[] arr = new int[size];
+        int magicSum = 0; 
+        for (int z = 0; z < arr.Length; z++)
+        {
+            arr[z] = Convert.ToInt32(Console.ReadLine());
+        }
+        Console.WriteLine("Results:");
+        for (int z = 0; z < arr.Length; z++)
+        {
+            int n = arr[z];
+            int temp = n;
+            while (temp > 9)
+            {
+                int sum = 0;
+                while (temp > 0)
+                {
+                    sum = sum + (temp % 10);
+                    temp = temp / 10;
+                }
+                temp = sum;
+            }  
+            if (temp == 1)
+            {
+                Console.WriteLine(n + " is a Magic number");
+                magicSum = magicSum + n; 
+            }
+            else
+            {
+                Console.WriteLine(n + " is not a magic number");
+            }
+        }
+        Console.WriteLine("\nTotal sum of Magic numbers: " + magicSum);
+    }
+}
