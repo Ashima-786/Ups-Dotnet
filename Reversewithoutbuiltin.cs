@@ -1,5 +1,5 @@
 using System;
-class Reversewithoutbuiltin
+public class Reversewithoutbuiltin
 {
     public static void Main(string[] args)
     {
