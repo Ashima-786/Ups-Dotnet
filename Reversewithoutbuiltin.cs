@@ -1,7 +1,7 @@
 using System;
 class Reversewithoutbuiltin
 {
-    static void Main()
+    public static void Main(string[] args)
     {
         Console.Write("Enter array size: ");
         int n = Convert.ToInt32(Console.ReadLine());
