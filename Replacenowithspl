@@ -1,0 +1,18 @@
+using System;
+public class Replacenwithspl
+{
+    public static void Main(string[] args)
+    {
+        Console.Write("Enter string: ");
+        string s = Console.ReadLine();
+        string res = "";
+        foreach (char c in s)
+        {
+            if (char.IsDigit(c))
+                res += "*";
+            else
+                res += c;
+        }
+        Console.WriteLine(res);
+    }
+}
