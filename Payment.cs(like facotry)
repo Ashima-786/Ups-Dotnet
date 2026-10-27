@@ -1,0 +1,68 @@
+using System;
+
+interface Ipayment
+{
+    void Pay(int amount);
+}
+
+class Gpay : Ipayment
+{
+    public void Pay(int amount)
+    {
+        Console.WriteLine("Payment of " + amount + " using GPay");
+    }
+}
+
+class Credit : Ipayment
+{
+    public void Pay(int amount)
+    {
+        Console.WriteLine("Payment of " + amount + " using Credit Card");
+    }
+}
+
+class Cash : Ipayment
+{
+    public void Pay(int amount)
+    {
+        Console.WriteLine("Payment of " + amount + " using Cash");
+    }
+}
+
+class Payment1
+{
+    public static Ipayment Getpayment(string paymenttype)
+    {
+        if (paymenttype == "Gpay")
+        {
+            return new Gpay();
+        }
+        else if (paymenttype == "Cash")
+        {
+            return new Cash();
+        }
+        else if (paymenttype == "Credit")
+        {
+            return new Credit();
+        }
+        else
+        {
+            return null;
+        }
+    }
+}
+
+class Payment
+{
+    static void Main()
+    {
+        Ipayment obj1 = Payment1.Getpayment("Gpay");
+        obj1.Pay(1000);
+
+        Ipayment obj2 = Payment1.Getpayment("Cash");
+        obj2.Pay(500);
+
+        Ipayment obj3 = Payment1.Getpayment("Credit");
+        obj3.Pay(2000);
+    }
+}
