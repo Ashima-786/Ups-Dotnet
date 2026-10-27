@@ -21,9 +21,9 @@ public class Program
         Calculator calc = new Calculator();
         Console.WriteLine("Integer Addition ");
         Console.Write("Enter first integer: ");
-        int A = Convert.ToInt32(Console.ReadLine());
+        int intA = Convert.ToInt32(Console.ReadLine());
         Console.Write("Enter second integer: ");
-        int B = Convert.ToInt32(Console.ReadLine());
+        int intB = Convert.ToInt32(Console.ReadLine());
         Console.WriteLine("Result: " + calc.Add(intA,intB));
         Console.WriteLine(); 
         Console.WriteLine("Double Addition");
