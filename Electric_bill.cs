@@ -8,12 +8,12 @@ public class Electric_bill
         double totalRevenue = 0;
         for (int i = 1; i <= customers; i++)
         {
-            Console.WriteLine("\nCustomer " + i);
-            Console.Write("Enter customer ID: ");
+            Console.WriteLine("Customer " + i);
+            Console.Write("Enter customer ID:");
             int id = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter customer name: ");
+            Console.Write("Enter customer name:");
             string name = Console.ReadLine();
-            Console.Write("Enter units consumed: ");
+            Console.Write("Enter units consumed:");
             int units = Convert.ToInt32(Console.ReadLine());
             double bill = 0;
             if (units <= 100)
@@ -22,16 +22,16 @@ public class Electric_bill
             }
             else if (units <= 200)
             {
-                bill = 100 * 1.5 + (units - 100) * 2.5;
+                bill = 100 * 1.5 + (units-100) * 2.5;
             }
             else
             {
-                bill = 100 * 1.5 + 100 * 2.5+(units - 200)*4;
+                bill = 100*1.5+100*2.5+(units-200)*4;
             }
-            bill = bill + 50;
-            if (bill > 1000)
+            bill = bill+50;
+            if (bill>1000)
             {
-                bill = bill + bill * 0.05;
+                bill = bill+bill*0.05;
             }
             Console.WriteLine("ELECTRICITY BILL");
             Console.WriteLine("Customer ID: " + id);
