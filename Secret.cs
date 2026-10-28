@@ -1,7 +1,9 @@
+
 using System;
+
 public class Secret
 {
-   public static void Main(string[] args)
+    public static void Main(string[] args)
     {
         Random r = new Random();
         string choice = "yes";
@@ -10,19 +12,18 @@ public class Secret
             int code = r.Next(1000, 10000);
             string secret = code.ToString();
             int score = 0;
-            bool won = false;
-            Console.WriteLine("Guess the 4-digit secret code!");
+            int correct = 0;
             for (int i = 1; i <= 10; i++)
             {
-                Console.Write("Enter your 4-digit guess: ");
+                Console.Write("Enter 4-digit code: ");
                 string guess = Console.ReadLine();
                 if (guess.Length != 4)
                 {
-                    Console.WriteLine("Enter exactly 4 digits!");
+                    Console.WriteLine("Enter 4 digits!");
                     i--;
                     continue;
                 }
-                int correct = 0;
+                correct = 0;
                 for (int j = 0; j < 4; j++)
                 {
                     if (guess[j] == secret[j])
@@ -34,18 +35,14 @@ public class Secret
                 Console.WriteLine("Attempts left: " + (10 - i));
                 if (guess == secret)
                 {
-                    Console.WriteLine("Congratulations! Code cracked!");
+                    Console.WriteLine("Code cracked!");
                     score = (11 - i) * 10;
-                    won = true;
                     break;
                 }
             }
-            if (won == false)
-            {
-                Console.WriteLine("Game over! Code was " + secret);
-            }
+            Console.WriteLine("Secret code: " + secret);
             Console.WriteLine("Score: " + score);
-            Console.Write("Try a new code (yes/no): ");
+            Console.Write("Play again? (yes/no): ");
             choice = Console.ReadLine().ToLower();
         }
     }
